@@ -6,24 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector</title>
-    <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 </head>
 
+<style>
+    img {
+        height: 100px;
+        width: 100px;
+    }
 
+    .top {
+        background-color: yellow;
+        width: 300px;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+
+    #row {
+        position: relative;
+    }
+
+    #compNumber {
+        position: absolute;
+        background-color: lightseagreen;
+        width: 300px;
+        height: 200px;
+    }
+
+    #winBox {
+        position: absolute;
+        left: 320px;
+        background-color: lightcoral;
+        width: 300px;
+        height: 200px;
+    }
+
+    .buttonsArea {
+        margin-top: 250px;
+        margin-bottom: 20px;
+    }
+</style>
 
 <body>
 
-    <div id="name">Crystal Collector</div>
-    <div class="top">Instructions
-        <br> Click an emoji to increase your score. Each emoji has a different value. If your score matches the computer's number,
-        you win.</div>
+    <div class="top">Crystal Collector</div>
+    <div class="top">Instructions</div>
     <div id="row">
-        <div id="comp"> Computer's Number:
-            <br>
-            <span id="compNumber">0</span>
-        </div>
+        <div id="compNumber">0</div>
         <div id="winBox">
             wins:
             <span id="wins">0</span>
@@ -50,7 +80,7 @@
         </button>
     </div>
 
-    <div id="scoreBox">Your Score:
+    <div class="top">Your Score:
         <span id="yourScore">0</span>
     </div>
     <script>
@@ -67,7 +97,7 @@
 
         compChoose();
         assignValues();
-
+        
 
         function assignValues() {
             arrayOfButtons.forEach(function (button) {
@@ -98,7 +128,7 @@
                 sum += total[i];
                 $("#yourScore").html(sum);
                 console.log(score)
-
+            
                 if (sum === compChoice[0]) {
                     wins++;
                     $("#wins").html(wins)
@@ -113,28 +143,28 @@
                     reset();
                 }
             }
-
+            
         }
 
-        $("#smile").click(function () {
-            total.push(parseInt($(this).attr("data-number")));
-            console.log(total)
-            checkForWin();
-        })
-        $("#kiss").click(function () {
-            total.push(parseInt($(this).attr("data-number")));
-            checkForWin();
+            $("#smile").click(function () {
+                total.push(parseInt($(this).attr("data-number")));
+                console.log(total)
+                checkForWin();
+            })
+            $("#kiss").click(function () {
+                total.push(parseInt($(this).attr("data-number")));
+                checkForWin();
 
-        })
-        $("#wink").click(function () {
-            total.push(parseInt($(this).attr("data-number")));
-            checkForWin();
+            })
+            $("#wink").click(function () {
+                total.push(parseInt($(this).attr("data-number")));
+                checkForWin();
 
-        })
-        $("#crazy").click(function () {
-            total.push(parseInt($(this).attr("data-number")));
-            checkForWin();
-        })
+            })
+            $("#crazy").click(function () {
+                total.push(parseInt($(this).attr("data-number")));
+                checkForWin();
+            })
 
 
     </script>
