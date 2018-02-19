@@ -7,55 +7,93 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Collector</title>
     <link rel="stylesheet" type="text/css" href="Assets/css/reset.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-   
+
 </head>
 
 
 
 <body>
-
-    <div id="name">Emoji Collector</div>
-    <div class="top">Instructions:
-        <br> Click an emoji to increase your score. Each emoji has a different value. If your score matches the computer's number,
-        you win.</div>
-    <div id="row">
-        <div id="comp"> Computer's Number:
-            <br>
-            <span id="compNumber">0</span>
+    <div class="container">
+        <div class="row">
+            <div class="jumbotron">
+                <h1>Emoji Collector</h1>
+                <p>Click an emoji to increase your score. Each emoji has a different value. If your score matches the computer's
+                    number, you win. After each round, the emoji values will change.</p>
+                <p>
+                    <a class="btn btn-primary btn-lg" href="https://github.com/kevinthomaskane/week-4-game/blob/master/Assets/javascript/game.js"
+                        target="_blank" role="button">See the code</a>
+                </p>
+            </div>
         </div>
-        <div id="winBox">
-            wins:
-            <span id="wins">0</span>
-            <br>
-            <br> losses:
-            <span id="losses">0</span>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Comp's Number</h3>
+                    </div>
+                    <div class="panel-body">
+                        <span id="compNumber">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Your Record</h3>
+                    </div>
+                    <div class="panel-body">
+                        wins:
+                        <span id="wins">0</span>
+                        <br>
+                        <br> losses:
+                        <span id="losses">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Your Score</h3>
+                    </div>
+                    <div class="panel-body">
+                        <span id="yourScore">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
         </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="btn-group" role="group" aria-label="...">
+
+                <button id="smile" type="button" class="btn btn-default">
+                    <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Eyes_Opened_large.png?v=1480481056">
+                </button>
+                <button id="kiss" type="button" class="btn btn-default">
+                    <img src="http://cdn.shopify.com/s/files/1/1061/1924/products/Blow_Kiss_Emoji_grande.png?v=1480481051">
+                </button>
+                <button id="wink" type="button" class="btn btn-default">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt-8yaXPi0ZFgPNzPFsXo5ATbIsHw73lHA0RkNZCN19qXC82Ml">
+                </button>
+                <button id="crazy" type="button" class="btn btn-default">
+                    <img src="https://timedotcom.files.wordpress.com/2017/07/1f92a-320px.png">
+                </button>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+
+
     </div>
 
-
-
-    <div class="buttonsArea">
-        <button id="smile">
-            <img src="https://cdn.shopify.com/s/files/1/1061/1924/products/Smiling_Emoji_with_Eyes_Opened_large.png?v=1480481056">
-        </button>
-        <button id="kiss">
-            <img src="http://cdn.shopify.com/s/files/1/1061/1924/products/Blow_Kiss_Emoji_grande.png?v=1480481051">
-        </button>
-        <button id="wink">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSt-8yaXPi0ZFgPNzPFsXo5ATbIsHw73lHA0RkNZCN19qXC82Ml">
-        </button>
-        <button id="crazy">
-            <img src="https://timedotcom.files.wordpress.com/2017/07/1f92a-320px.png">
-        </button>
-    </div>
-
-    <div id="scoreBox">Your Score:
-        <span id="yourScore">0</span>
-    </div>
-   
     <script type="text/javascript" src="Assets/javascript/game.js"></script>
 </body>
 

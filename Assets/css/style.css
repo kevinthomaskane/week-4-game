@@ -1,62 +1,24 @@
 img {
-    height: 100px;
-    width: 100px;
+    height: 130px;
+    width: 120px;
 }
 
-.top {
-    background-color: yellow;
-    width: 300px;
-    overflow: scroll;
-    height: 100px;
-    margin-bottom: 20px;
-    padding: 10px;
+.jumbotron{
+    background: rgba(160, 157, 157, 0.4);
+    color: white;
 }
 
-#name {
-    background-color: lightblue;
-    font-size: 200%;
-    padding: 10px;
-    margin-bottom: 10px;
-    width: 300px;
-}
-
-#row {
-    position: relative;
-}
-
-#comp {
-    position: absolute;
-    background-color: lightseagreen;
-    width: 300px;
-    padding: 10px;
-    height: 60px;
-    text-align: center;
-}
-
-#winBox {
-    position: absolute;
-    left: 320px;
-    background-color: lightcoral;
-    width: 100px;
-    padding: 10px;
-    height: 60px;
-}
-
-.buttonsArea {
-
-    margin-top: 120px;
-    margin-bottom: 20px;
-}
 
 #compNumber {
     font-size: 300%;
+    color: red;
 }
 
-#scoreBox{
-    width: 130px;
-    padding: 10px;
-    height: 60px;
-    background-color: lightcoral;
-    line-height: 60px;
-    vertical-align: middle;
+#yourScore {
+    font-size: 300%;
+    color: green;
+}
+
+body{
+    background-image: url("https://villageofcoldwater.com/wp-content/uploads/2014/03/Elegant-background-grey-illumination-%D0%BE%D0%B1%D0%BE%D0%B8-1920x1080.jpg");
 }
